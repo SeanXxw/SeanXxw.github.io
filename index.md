@@ -8,3 +8,4 @@ icon: fa-home
 auto-header: none
 order: 1
 ---
+<meta charset="UTF-8">
