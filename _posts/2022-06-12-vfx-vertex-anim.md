@@ -51,4 +51,18 @@ Alpha的剔除和出现，就是利用前面提到的与方块纹理样式结合
 
 
 #### 黑洞效果
-效果如下：
+效果如下：<br />
+![holesuck](https://user-images.githubusercontent.com/106949238/173475942-5980f7f3-a743-4822-834a-a3373922504f.gif)
+
+#### 实现方式
+和传送效果的实现方式基本一致。这里的区别在于WPO。<br />
+传送效果的世界位置偏移是一个整体的偏移量。<br />
+而这里作为黑洞吸入的效果，我们需要以一个世界坐标点为目标点，去计算每个顶点与目标点的向量再进行偏移。从而才能达到一种吸入的效果。<br />
+
+如下图：<br />
+![wpo2](https://user-images.githubusercontent.com/106949238/173477949-997f2f52-904f-4b81-a942-f1a0228fbac4.png)
+
+除此之外，从模型的哪个位置开始偏移，这里也是利用了`BoundingBoxBased_0-1_UVW`节点产生遮罩。可以根据自己的需要自行调整。<br />
+![offset-mask](https://user-images.githubusercontent.com/106949238/173478837-0ea4d818-0d75-429c-804c-795c7f23970f.png)
+
+
