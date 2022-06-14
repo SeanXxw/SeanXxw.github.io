@@ -62,9 +62,8 @@ layout: post
    
 <font size="3">
    4、Alpha<br>
-   Alpha的剔除和出现，就是利用前面提到的与方块纹理样式结合的渐变UV动画取反即可。
+   Alpha的剔除和出现，就是利用前面提到的与方块纹理样式结合的渐变UV动画取反即可。<br>
 </font>
-
 
 ### 黑洞效果
 <font size="3">
