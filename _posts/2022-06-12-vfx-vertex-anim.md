@@ -7,8 +7,6 @@ layout: post
 
 ****
 
-<font size="7">输入文章内容</font>
-
 1. [传送效果](#传送效果)
    - [实现方式](#实现方式)
 2. [黑洞效果](#黑洞效果)
@@ -18,8 +16,8 @@ layout: post
 ![gif_01](https://user-images.githubusercontent.com/106949238/173237262-a0c10011-1c95-4ed8-b348-5f73dcea18c3.gif)
 
 #### 实现方式
-1、时间循环<br>
-这里我把时间做了一个6s的循环。<br>
+<font size="3">1、时间循环</font><br>
+<font size="3">这里我把时间做了一个6s的循环。</font><br>
 0-2s用来做方块向下的渐变UV动画、顶点动画、Alpha剔除。<br>
 3-5s用来做方块向上的渐变UV动画、顶点动画、Alpha显示。<br>
 5-6s为了视觉对称做了停顿。<br>
