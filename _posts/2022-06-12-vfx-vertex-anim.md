@@ -24,8 +24,6 @@ layout: post
    0-2s用来做方块向下的渐变UV动画、顶点动画、Alpha剔除。<br>
    3-5s用来做方块向上的渐变UV动画、顶点动画、Alpha显示。<br>
    5-6s为了视觉对称做了停顿。<br>
-</font>
-<font size="3">
    如下图：<br>
 </font>
 
@@ -63,6 +61,7 @@ layout: post
    4、Alpha<br>
    Alpha的剔除和出现，就是利用前面提到的与方块纹理样式结合的渐变UV动画取反即可。<br>
 </font>
+
 
 ### 黑洞效果
 <font size="3">
