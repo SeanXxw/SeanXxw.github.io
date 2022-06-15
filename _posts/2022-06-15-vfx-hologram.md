@@ -40,7 +40,7 @@ layout: post
   2、比较重要的就是消失和出现的时候一个闪烁渐变的Alpha。<br>
 </font> 
 
-  - <font size="3">先要得到从0-1循环的结果。<br></font>
+  - <font size="3">先要得到从0-1循环的结果。</font>
   <font size="3">
     这里利用Sin函数，把[-1, 1]的结果映射到[0, 1]。然后利用easeOutQuint函数做一个曲率的映射[0, 1]的结果。
     如下图：<br>
@@ -50,7 +50,7 @@ layout: post
   
   ![curvetime](https://user-images.githubusercontent.com/106949238/173853464-13dcb508-f9b3-4394-80a5-2ccbb58d9b6d.gif)
   
-  - <font size="3">利用UV形成最后的遮罩<br></font>
+  - <font size="3">利用UV形成最后的遮罩</font>
   <font size="3">
     将上一步中得到的结果，通过SphereMask，结合U和V进行遮罩处理。节点如下图：<br>
   </font> 
