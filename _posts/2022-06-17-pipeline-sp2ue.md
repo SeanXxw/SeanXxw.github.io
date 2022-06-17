@@ -16,6 +16,7 @@ layout: post
 3. [最终效果](#最终效果)
 
 ### 实现方式
+
 #### - 造成差异的原因
 <font size="3">
   1、光照部分：SP基于IBL的。而游戏引擎中通常简单的光照包含了：主光、SkyLight(SkyGI)、IBL反射。<br>
@@ -23,6 +24,7 @@ layout: post
   2、ToneMapping算法不同，导致后期在颜色从HDR转回LDR的时候出现了差异。<br>
   <b>所以总结起来，要实现两边的对齐，就要在SP中自定义Shading Model去和引擎匹配</b>。<br>
 </font>
+
 
 #### - 光照对齐
 <font size="3">
