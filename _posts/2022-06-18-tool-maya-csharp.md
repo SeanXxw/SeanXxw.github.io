@@ -1,5 +1,5 @@
 ---
-title: Tool - Maya - C#工具开发
+title: Tool - Maya/C#工具开发
 author: Sean
 layout: post
 ---
