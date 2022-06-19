@@ -9,7 +9,8 @@ layout: post
 
 1. [环境部署](#环境部署)
 2. [运行模板示例](#运行模板示例)
-3. [最终效果](#最终效果)  
+3. [自定义界面操作物体](#自定义界面操作物体)
+4. [个人总结](#个人总结)
   
 ### 环境部署  
 #### - 获取Maya Devkit:
@@ -66,7 +67,56 @@ layout: post
   
 #### - HelloWorld
 <font size="3">
-    为了能够让制作的工具能够在Maya Plug-in中正常开启调用，这里需要添加Module。</br>
-    Module的目录结构形式，以及描述文件MOD形式如下图：</br>
+    <b>第一个程序HelloWorld</b>：</br>
+    创建工程，在C#文件中需要做几件事情：</br>
+    1. 引入命名空间<b>Autodesk.Maya.OpenMaya</b></br>
+    2. 新建类，这个类需要继承自<b>MPxCommand</b>以及接口<b>IMPxCommand</b>。</br>
+    3. 重写doIt方法，Maya调用执行的具体功能都放在这里实现。</br>
+    4. 注册绑定命令，以供Maya通过Mel或者Python调用到。</br>
+    如下图：</br>
+</font>
+
+  ![class](https://user-images.githubusercontent.com/106949238/174469377-0656b58b-e7c8-4f0c-8f53-3943598cfda5.png)
+
+<font size="3">
+    5. 需要把VS生成改成Release，然后重新生成解决方案。生成后，可在项目文件夹的Release目录下找到生成的.dll文件。</br>
+    <b>要注意的是，如果生成的后缀不是.nll.dll，那么要将文件后缀改成.nll.dll</b></br>
+    6. 将dll文件复制到modules下的plug-ins文件夹内。如下图：</br>
+</font>
+
+  ![dllpic](https://user-images.githubusercontent.com/106949238/174469465-bf5dcba7-3a4e-4445-9c37-fbfa112cf7c5.png)
+
+<font size="3">
+    7. 打开Maya，在插件管理器下加载插件。</br>
+    8. 通过MEL或者Python调用我们注册的命令。如下图：</br>
 </font>
   
+  ![mayacall](https://user-images.githubusercontent.com/106949238/174469538-5e24a5b9-2f0d-46bf-91e6-24ee3fe7840b.png)
+  
+### 自定义界面操作物体
+<font size="3">
+    在VS中使用WPF来编辑UI，以及绑定事件，处理逻辑是一件非常方便的事情。所以我这里就想能否通过上面的方式，让Maya打开WPF界面，来操作Maya中的物体。</br>
+    经过尝试之后，这里发现是可行的。这里有一个很简单的重命名工具展示。如下图：</br>
+</font>
+
+  ![wpf](https://user-images.githubusercontent.com/106949238/174470124-50617a00-9cca-4d9b-b331-c45ffbf33873.gif)
+
+### 个人总结
+<font size="3">
+    使用C#来制作Maya插件以及结合WPF来自定义UI界面在我看来各有利弊，纯属个人观点。</br>
+</font>  
+
+#### 优点
+<font size="3">
+    1. 对熟悉C#的同学很友好，并且VS有很多便捷的功能。</br>
+    2. 实际操作过程中，使用WPF来自定义UI界面并且绑定事件处理逻辑，比使用QtDesigner设计界面再转成Python再去对功能空间做绑定事件处理逻辑来的便捷。</br>
+    3. 我看到3D Max也是支持.NET的，所以这意味着同样的功能，可以使用同一套设计的WPF界面，美术同学在两个软件切换使用的时候不会有差异性。</br>
+    4. Maya集成.NET插件主要依赖于.NET框架的版本，只要依赖的.NET框架版本是正确的，就不用考虑担心Maya版本不同导致API变化导致功能出现问题。</br>
+    5. 如果工具要给到第三方，通过.dll的加密会更安全。
+</font>
+
+#### 缺点
+<font size="3">
+    1. 使用.NET的方式在调试以及编译上不如Python。</br>
+    2. 对于已经非常熟悉Maya，Python，Qt，PySide的同学，似乎没什么必要这么做。</br>
+</font>
