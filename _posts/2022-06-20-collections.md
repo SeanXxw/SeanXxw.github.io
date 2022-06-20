@@ -27,10 +27,6 @@ layout: post
   [A站地址](https://www.artstation.com/artwork/xzoXYY)
   ![Copper](https://user-images.githubusercontent.com/106949238/174597491-6515cc97-3160-4f74-b668-b272dac6a66b.jpg)
   
-#### SD - 树皮
-  [A站地址](https://www.artstation.com/artwork/KaL68R)
-  ![TreeBark](https://user-images.githubusercontent.com/106949238/174598100-29d42099-a13f-4a86-b1f4-55c89aa34966.jpg)
-
 #### Joy-Con
   [A站地址](https://www.artstation.com/artwork/Pm3Lvr)
   ![joy-con](https://user-images.githubusercontent.com/106949238/174596733-f95d261e-e4e6-459a-a5e8-0dc4f76516e8.jpg)
