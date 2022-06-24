@@ -69,7 +69,8 @@ layout: post
 <font size="3">
     <b>第一个程序HelloWorld</b>：<br>
     创建工程，在C#文件中需要做几件事情：<br>
-    1. 引入命名空间<b>Autodesk.Maya.OpenMaya</b><br>
+    1. 引入命名空间<b>Autodesk.Maya.OpenMaya</b>。<b>注意：</b><br>
+       如果这里报错的话，需要在项目中引入<b>openmayacs.dll</b>库。这个库的路径通常在<b>C:\Program Files\Autodesk\Maya2018\bin</b>。<br>
     2. 新建类，这个类需要继承自<b>MPxCommand</b>以及接口<b>IMPxCommand</b>。<br>
     3. 重写doIt方法，Maya调用执行的具体功能都放在这里实现。<br>
     4. 注册绑定命令，以供Maya通过Mel或者Python调用到。<br>
